@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e2d4ae;
+    text-align: center;
+    font-family: Comic sans MS;
+}
+
+.top-container {
+    background-color: #e8dab3;
+    width: 25.1rem;
+    margin: auto;
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+table {
+    background-color: #e8dab3;
+    width: 25.1rem;
+    height: 30rem;
+    margin: auto;
+    padding: 0.2rem;
+    table-layout: fixed;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.shown {
+    background-color: #e8dab3;
+}
+
+td {
+    width: 30px;
+    height: 40px;
+    background-color: #d8744c;
+    font-size: 1.3rem;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 30px 0px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+td:hover {
+    border: 2px solid black;
+}
+
+.timer {
+    display: inline-block;
+    margin: auto;
+    font-size: 1.4rem;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 34px 20px rgba(212, 201, 160, 1) inset;
+}
+
+.flags {
+    display: inline-block;
+    margin: auto;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 34px 20px rgba(212, 201, 160, 1) inset;
+}
+
+.smiley {
+    display: inline-block;
+    margin: auto;
+    font-size: 2.5rem;
+    background-color: transparent;
+    box-shadow: 0px 0px 34px 20px rgba(212, 201, 160, 1) inset;
+    border-radius: 15px;
+    border: 3px solid #d8744c;
+    padding: 0.5rem;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.smiley:hover {
+    opacity: 1;
+}
+
+.bottom-container {
+    background-color: #e8dab3;
+    width: 25.1rem;
+    height: 8rem;
+    margin: auto;
+    border-radius: 0px 0px 15px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.difficulty {
+    margin: auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 34px 20px rgba(212, 201, 160, 1) inset;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.difficulty:hover {
+    opacity: 1;
+}
+
+.lives {
+    background-color: #e8dab3;
+    width: 25.1rem;
+    height: 4rem;
+    margin: auto;
+    font-size: 1.7rem;
+    padding: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+footer {
+    padding: 2rem;
+}
+
+.hints {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #e8dab3;
+    width: 25.1rem;
+    height: 4rem;
+    margin: auto;
+    font-size: 2rem;
+    padding: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.hint1 {
+    opacity: 0.4;
+    display: inline-block;
+}
+
+.hint2 {
+    opacity: 0.4;
+    display: inline-block;
+}
+
+.hint3 {
+    opacity: 0.4;
+    display: inline-block;
+}
+
+.hint1:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.hint2:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.hint3:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+h2 {
+    visibility: hidden;
+}
