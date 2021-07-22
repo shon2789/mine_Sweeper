@@ -315,6 +315,8 @@ function resetGame() {
     isHintOn = false;
     shownCellsCount = 0;
     numCellsOnBoard = (gLevel.size ** 2) - gLevel.mines;
+    totalSeconds = 0;
+
 }
 
 //Function for resseting the CSS of hints:
