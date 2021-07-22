@@ -12,6 +12,8 @@ var gLevel = {
     mines: 2,
     livesLeft: 1
 }
+
+
 var numCellsOnBoard; //Will store how many cells with neighbor mines.
 var minesIgnored = 0;
 var flagCounter = gLevel.mines;
@@ -22,15 +24,15 @@ var gGame = {
 
 
 function initGame() {
+    resetGame();
     clearInterval(timerVar)
     gBoard = createMat(gLevel.size);
     renderBoard(gBoard);
     putMinesOnBoard(gLevel.mines);
     setMinesNegCount();
     renderBoard(gBoard);
-    gLevel.livesleft = 1;
-    resetGame();
     resetHints();
+    flagCounter = gLevel.mines;
     gGame.isOn = true;
 
 
@@ -186,19 +188,21 @@ function chooseDifficulty(elBtn) {
         gLevel.mines = 2;
         gLevel.livesLeft = 1;
         flagCounter = gLevel.mines;
+        initGame();
     } else if (elBtn.innerText === 'Medium') {
         gLevel.size = 8;
         gLevel.mines = 12;
         gLevel.livesLeft = 2;
         flagCounter = gLevel.mines;
+        initGame();
     } else if (elBtn.innerText === 'Expert') {
         gLevel.size = 12;
         gLevel.mines = 30;
         gLevel.livesLeft = 3;
         flagCounter = gLevel.mines;
+        initGame();
     }
 
-    initGame();
 }
 
 //Reveals mines all over the board when user loses:
@@ -295,6 +299,13 @@ function showHintCells(idxI, idxJ) {
 function resetGame() {
     document.querySelector('.flags').innerText = '⛳️ ' + flagCounter;
     document.querySelector('.timer').innerText = ' 00:00';
+    if (gLevel.size === 4) {
+        gLevel.livesLeft = 1;
+    } else if (gLevel.size === 8) {
+        gLevel.livesLeft = 2;
+    } else if (gLevel.size === 12) {
+        gLevel.livesLeft = 3;
+    }
     document.querySelector('.lives span').innerText = gLevel.livesLeft;
     document.querySelector('.smiley').innerText = '😃'
     document.querySelector('h2').style.visibility = 'hidden';
@@ -338,3 +349,4 @@ function winGame() {
     new Audio('/sound/win.wav').play();
     gGame.isOn = false;
 }
+
