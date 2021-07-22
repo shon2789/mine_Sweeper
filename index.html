@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Mine Sweeper</title>
+</head>
+
+<body onload="initGame()">
+    <h1><img src="img/mineSweeper.png"> </h1>
+    <h2>YOU WON!</h2>
+    <div class="top-container">
+
+        <div class="timer">00:00</div>
+        <button class="smiley" onclick="initGame()">😃</button>
+        <div class="flags">2</div>
+
+    </div>
+
+    <div class="board">
+        <table>
+
+        </table>
+
+    </div>
+
+    <div class="hints">
+
+
+        <div class="hint hint1" onclick="hintClicked(this)">
+            💡
+        </div>
+        <div class="hint hint2" onclick="hintClicked(this)">
+            💡
+        </div>
+        <div class="hint hint3" onclick="hintClicked(this)">
+            💡
+        </div>
+
+    </div>
+    <div class="lives">You have <span></span> ❤️ left</div>
+    <div class="bottom-container">
+        <div class="difficulty" onclick="chooseDifficulty(this)">Easy </div>
+        <div class="difficulty" onclick="chooseDifficulty(this)">Medium</div>
+        <div class="difficulty" onclick="chooseDifficulty(this)">Expert</div>
+    </div>
+
+
+    <footer>Made By Shon Shinkarenko</footer>
+
+    <script src="js/game.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+
+</html>
