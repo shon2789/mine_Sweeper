@@ -5,6 +5,8 @@ var isHintOn = false;
 var clickCounter = 0;
 var gBoard;
 var shownCellsCount;//Will store the number of shown cells.
+var safeClicks = [];
+var safeClicksCounter = 3;
 
 
 var gLevel = {
@@ -268,7 +270,6 @@ function showHintCells(idxI, idxJ) {
             if (gBoard[i][j].isShown || gBoard[i][j].isFlag) continue;
 
             var elCell = document.querySelector(`.cell-${i}-${j}`);
-            console.log(elCell);
             elCell.classList.add('shown')
             if (!gBoard[i][j].isMine) {
                 elCell.innerText = gBoard[i][j].minesAroundCount;
@@ -288,7 +289,6 @@ function showHintCells(idxI, idxJ) {
                 if (gBoard[i][j].isShown || gBoard[i][j].isFlag) continue;
                 var elCell = document.querySelector(`.cell-${i}-${j}`);
                 elCell.classList.remove('shown')
-                console.log(elCell);
                 elCell.innerText = '';
             }
         }
@@ -316,6 +316,9 @@ function resetGame() {
     shownCellsCount = 0;
     numCellsOnBoard = (gLevel.size ** 2) - gLevel.mines;
     totalSeconds = 0;
+    safeClicks = [];
+    safeClicksCounter = 3;
+    document.querySelector('.safe-click span').innerText = safeClicksCounter
 
 }
 
@@ -352,3 +355,28 @@ function winGame() {
     gGame.isOn = false;
 }
 
+
+//Function to get a random safe to reveal cell:
+function safeClick() {
+    if (safeClicksCounter === 0) return;
+
+    for (var i = 0; i < gBoard.length; i++) {
+        for (var j = 0; j < gBoard[i].length; j++) {
+            if (!gBoard[i][j].isMine && !gBoard[i][j].isFlag && !gBoard[i][j].isShown) {
+                safeClicks.push({ i: i, j: j });
+            }
+        }
+    }
+    randIdxI = getRandomInt(0, safeClicks.length - 1);
+    var idxI = safeClicks[randIdxI].i
+    var idxJ = safeClicks[randIdxI].j
+    var elSafeCell = document.querySelector(`.cell-${idxI}-${idxJ}`);
+    elSafeCell.classList.add('safe');
+
+    setTimeout(function () {
+        elSafeCell.classList.remove('safe');
+    }, 2000);
+    safeClicksCounter--;
+    document.querySelector('.safe-click span').innerText = safeClicksCounter
+    safeClicks = [];
+}

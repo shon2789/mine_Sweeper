@@ -3,13 +3,13 @@
 }
 
 body {
-    background-color: #e2d4ae;
+    background-color: rgb(226, 212, 174);
     text-align: center;
     font-family: Comic sans MS;
 }
 
 .top-container {
-    background-color: #e8dab3;
+    background-color: rgb(233, 219, 180);
     width: 25.1rem;
     margin: auto;
     border-radius: 15px 15px 0px 0px;
@@ -37,10 +37,10 @@ table {
 td {
     width: 30px;
     height: 40px;
-    background-color: #d8744c;
+    background-color: hsl(17, 64%, 57%);
     font-size: 1.3rem;
     font-weight: bold;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 30px 0px;
+    box-shadow: rgba(145, 57, 10, 0.242) 0px 0px 30px 0px;
     border-radius: 7px;
     cursor: pointer;
 }
@@ -172,4 +172,34 @@ footer {
 
 h2 {
     visibility: hidden;
+}
+
+.safe-container {
+    background-color: rgb(233, 219, 180);
+    width: 25.1rem;
+    margin: auto;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-evenly;
+    padding: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.safe-click {
+    background-color: #4cc9f0;
+    margin: auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.6rem;
+    border-radius: 15px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.safe-click:hover {
+    opacity: 1;
+}
+
+.safe {
+    border: 3px solid #4cc9f0;
 }
