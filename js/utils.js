@@ -102,3 +102,17 @@ function isAllCellsShown() {
     }
     return true;
 }
+
+//Function to open and Close the 'How to play' modal:
+function openModal(elBtn) {
+    var modalBg = document.querySelector('.modal-bg');
+    var modalClose = document.querySelector('.modal-close');
+
+    elBtn.addEventListener('click', function () {
+        modalBg.classList.add('bg-active');
+    })
+
+    modalBg.addEventListener('click', function () {
+        modalBg.classList.remove('bg-active');
+    })
+}

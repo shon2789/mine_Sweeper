@@ -20,9 +20,12 @@
 
     </div>
     <div class="safe-container">
+        <div class="help" onclick="openModal(this)">How To Play</div>
         <div class="safe-click" onclick="safeClick()"><span></span> Safe Clicks</div>
     </div>
     <div class="board">
+
+
         <table>
 
         </table>
@@ -52,6 +55,22 @@
 
 
     <footer>Made By Shon Shinkarenko</footer>
+
+    <div class="modal-bg">
+        <div class="modal">Each Minesweeper game starts out with a grid of unmarked squares. After clicking one of these
+            squares, some of the squares will disappear, some will remain blank, and some will have numbers on them.
+            It's your job to use the numbers to figure out which of the blank squares have mines and which are safe to
+            click.
+
+            <ul class="options">
+                <li>Safe clicks: used to show a safe cell to click.</li>
+                <li>Hints: reveals a group of 9 cells (around the choosen cell) for 1 second.</li>
+                <li>3 Difficulty levels: Easy, Medium and Expert.</li>
+                <li>Each difficulty has an additional number of tries (lives)</li>
+            </ul>
+            <span class="modal-close">X</span>
+        </div>
+    </div>
 
     <script src="js/game.js"></script>
     <script src="js/utils.js"></script>
