@@ -5,6 +5,7 @@ Game options:
 - Safe clicks to reveal safe cells.
 - Hints: reveals a group of 9 cells (around the choosen cell) for 1 second.
 - 3 difficulty levels: easy, medium and expert.
+- Each level has an additional number of tries (lives).
 
 Check it out: https://shon2789.github.io/mine_Sweeper/
 
